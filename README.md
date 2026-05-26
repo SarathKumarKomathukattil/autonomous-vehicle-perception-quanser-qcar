@@ -29,7 +29,77 @@ demonstrating sim-to-real transfer of deep learning models.
 
 **Sim-to-Real Gap:** Quantified at 6.57% performance degradation.
 
-## 📸 System in Action
+## 🎬 Demo Videos
+
+### 🎥 Watch the System in Action
+
+> Development journey: **Simulation** → **Real Hardware** → **Multi-Sensor Fusion**
+
+#### 🎮 Simulation (QLabs)
+
+<table>
+<tr>
+<td align="center" width="50%">
+<a href="https://youtu.be/Wx3jcgViPUY">
+<img src="demo/images/simulation/04_yolo_stop_sign.png" width="100%"/><br>
+<b>🎬 Lane Following with YOLO Detection</b><br>
+<sub>QLabs simulation with stop sign detection</sub>
+</a>
+</td>
+<td align="center" width="50%">
+<a href="https://youtu.be/3C0ijRY6WMc">
+<img src="demo/images/simulation/01_qlabs_overview.png" width="100%"/><br>
+<b>🎬 ⭐ Complete QLabs Track Navigation</b><br>
+<sub>Top-down aerial view of full test environment</sub>
+</a>
+</td>
+</tr>
+</table>
+
+#### 🚗 Real Hardware Deployment (Quanser QCar)
+
+<table>
+<tr>
+<td align="center" width="50%">
+<a href="https://youtu.be/huQ3n4FpQ9k">
+<img src="demo/images/real_qcar/00a_qcar_lab_setup.png" width="100%"/><br>
+<b>🎬 Autonomous Lane Following - Lab Demo</b><br>
+<sub>Real QCar driving in lab environment</sub>
+</a>
+</td>
+<td align="center" width="50%">
+<a href="https://youtu.be/Yz0TqO5UUAQ">
+<img src="demo/images/real_qcar/04a_ENet_Trajectory.png" width="100%"/><br>
+<b>🎬 ⭐ ENet Lane Segmentation (QCar View)</b><br>
+<sub>First-person view with 93.73% mIoU</sub>
+</a>
+</td>
+</tr>
+</table>
+
+#### 🎯 Multi-Sensor Fusion (Production System)
+
+<table>
+<tr>
+<td align="center" width="50%">
+<a href="https://youtu.be/N02fPjUrzRY">
+<img src="demo/images/real_qcar/01b_test_setup.png" width="100%"/><br>
+<b>🎬 ⭐ Obstacle Detection</b><br>
+<sub>QCar with LiDAR + RealSense fusion</sub>
+</a>
+</td>
+<td align="center" width="50%">
+<a href="https://youtu.be/vcsca9mn524">
+<img src="demo/images/real_qcar/02a_sensor_fusion_main.png" width="100%"/><br>
+<b>🎬 ⭐⭐ Multi-Sensor Fusion Demo</b><br>
+<sub>LiDAR + Depth Camera + ENet (STRICT fusion)</sub>
+</a>
+</td>
+</tr>
+</table>
+
+> 🎬 **Click any thumbnail to watch the full video on YouTube**
+
 
 ### 🚗 Real Hardware Deployment
 
