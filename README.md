@@ -29,6 +29,146 @@ demonstrating sim-to-real transfer of deep learning models.
 
 **Sim-to-Real Gap:** Quantified at 6.57% performance degradation.
 
+## 📸 System in Action
+
+### 🚗 Real Hardware Deployment
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/00a_qcar_lab_setup.png" width="500"/></td>
+<td><img src="demo/images/real_qcar/00b_system_running_closeup.png" width="500"/></td>
+</tr>
+<tr>
+<td align="center"><b>QCar in Lab Environment</b></td>
+<td align="center"><b>System Running Live</b></td>
+</tr>
+</table>
+
+### 🏗️ Hardware Setup
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/01a_qcar_hardware.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/01b_test_setup.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">Quanser QCar Hardware</td>
+<td align="center">Test Environment</td>
+</tr>
+</table>
+
+### 🎯 Multi-Sensor Fusion
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/02a_sensor_fusion_main.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/02b_sensor_fusion_main.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">Sensor Fusion View 1</td>
+<td align="center">Sensor Fusion View 2</td>
+</tr>
+</table>
+
+### 📡 Individual Sensor Outputs
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/03a_lidar_visualization.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/03b_depth_perception.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">LIDAR 360° View</td>
+<td align="center">RealSense Depth Camera</td>
+</tr>
+</table>
+
+### 🛣️ Lane Segmentation - ENet (Chosen for Deployment)
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/04a_ENet_Trajectory.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/04b_ENet_Analysis.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center"><b>ENet Trajectory (93.73% mIoU)</b></td>
+<td align="center"><b>ENet Performance Analysis</b></td>
+</tr>
+</table>
+
+### 🔍 Lane Segmentation - U-Net (Baseline Comparison)
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/05a_UNet_Trajectory.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/05b_UNet_Analysis.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">U-Net Trajectory (94.12% mIoU)</td>
+<td align="center">U-Net Performance Analysis</td>
+</tr>
+</table>
+
+> **Result:** ENet chosen for deployment - 87x parameter reduction (0.37M vs 32M) with only 0.39% accuracy loss.
+
+### 🚦 YOLO Object Detection
+
+<table>
+<tr>
+<td><img src="demo/images/real_qcar/06a_yolo_no_right_turn.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/06b_yolo_traffic_light.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">No Right Turn Detection</td>
+<td align="center">Traffic Light Detection</td>
+</tr>
+<tr>
+<td><img src="demo/images/real_qcar/06c_yolo_stop_detection.png" width="400"/></td>
+<td><img src="demo/images/real_qcar/06d_yolo_stop_occlusion_test.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">Stop Sign Detection</td>
+<td align="center">Occlusion Robustness Test</td>
+</tr>
+</table>
+
+### 🎮 Simulation Results (QLabs)
+
+<table>
+<tr>
+<td><img src="demo/images/simulation/00_simulation_full_view.png" width="400"/></td>
+<td><img src="demo/images/simulation/01_qlabs_overview.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">Simulation Full View</td>
+<td align="center">QLabs Environment</td>
+</tr>
+<tr>
+<td><img src="demo/images/simulation/02_yolo_red_light.png" width="400"/></td>
+<td><img src="demo/images/simulation/03_yolo_green_light.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">YOLO: Red Light</td>
+<td align="center">YOLO: Green Light</td>
+</tr>
+<tr>
+<td><img src="demo/images/simulation/04_yolo_stop_sign.png" width="400"/></td>
+<td><img src="demo/images/simulation/05_lane_following.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">YOLO: Stop Sign</td>
+<td align="center">Lane Following</td>
+</tr>
+<tr>
+<td><img src="demo/images/simulation/06_waypoint_navigation.png" width="400"/></td>
+<td><img src="demo/images/simulation/07_curve_traversal.png" width="400"/></td>
+</tr>
+<tr>
+<td align="center">Waypoint Navigation</td>
+<td align="center">Curve Traversal</td>
+</tr>
+</table>
+
 ## 🏗️ System Architecture
 
 The system uses a **distributed architecture** between the Quanser QCar 
