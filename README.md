@@ -1,6 +1,6 @@
 # 🚗 Autonomous Vehicle Perception System on Quanser QCar
 
-> **MSc Mechatronics Dissertation** - End-to-end deep learning perception 
+> **MSc Mechatronic Systems Dissertation** - End-to-end deep learning perception
 > pipeline with multi-sensor fusion, deployed on Quanser QCar hardware.
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
@@ -12,7 +12,7 @@
 
 ## 🎯 Project Overview
 
-End-to-end autonomous vehicle perception system developed for MSc Mechatronics 
+End-to-end autonomous vehicle perception system developed for MSc Mechatronic Systems 
 dissertation at Kingston University, London. The system progresses from 
 **simulation (QLabs)** to **real hardware deployment (Quanser QCar)**, 
 demonstrating sim-to-real transfer of deep learning models.
@@ -24,7 +24,7 @@ demonstrating sim-to-real transfer of deep learning models.
 | **YOLOv8 Traffic Detection (mAP@0.5)** | 99.50% | 92.87% |
 | **ENet Lane Segmentation (mIoU)** | - | 93.73% |
 | **End-to-End Performance** | 25 FPS | 18-22 FPS |
-| **System Latency** | <30ms | <50ms |
+| **TCP/IP Latency** | — | <50ms |
 | **Sensor Fusion False Positives** | 0 | 0 |
 
 **Sim-to-Real Gap:** Quantified at 6.57% performance degradation.
@@ -174,12 +174,12 @@ demonstrating sim-to-real transfer of deep learning models.
 <td><img src="demo/images/real_qcar/05b_UNet_Analysis.png" width="400"/></td>
 </tr>
 <tr>
-<td align="center">U-Net Trajectory (94.12% mIoU)</td>
+<td align="center">U-Net Trajectory (93.56% mIoU)</td>
 <td align="center">U-Net Performance Analysis</td>
 </tr>
 </table>
 
-> **Result:** ENet chosen for deployment - 87x parameter reduction (0.37M vs 32M) with only 0.39% accuracy loss.
+> **Result:** ENet chosen for deployment — 87× parameter reduction (0.36M vs 31M) while matching U-Net accuracy (+0.17% mIoU).
 
 ### 🚦 YOLO Object Detection
 
@@ -260,9 +260,9 @@ The system uses a **distributed architecture** between the Quanser QCar
 - Real-time inference at 18-25 FPS
 
 ### 🛣️ Lane Segmentation (ENet vs U-Net)
-- **ENet**: 93.73% mIoU, 0.37M params (chosen for deployment)
-- **U-Net**: 94.12% mIoU, 32M params (baseline)
-- 87x parameter reduction with only 0.39% accuracy loss
+- **ENet**: 93.73% mIoU, 0.36M params (chosen for deployment)
+- **U-Net**: 93.56% mIoU, 31M params (baseline)
+- 87× parameter reduction while exceeding U-Net accuracy by 0.17 percentage points
 
 ### 🎯 Multi-Sensor Fusion
 - **Intel RealSense D435** depth camera
@@ -346,7 +346,7 @@ python stream_server_enet_lidar+realsense.py
 ## 📊 Development Journey
 
 1. **Simulation First (QLabs)** - Validated algorithms in safe environment
-2. **U-Net Lane Detection** - Baseline implementation (32M parameters)
+2. **U-Net Lane Detection** - Baseline implementation (31M parameters)
 3. **ENet Optimization** - 87x parameter reduction for embedded deployment
 4. **LiDAR Integration** - 360° obstacle detection
 5. **RealSense Integration** - Depth-based perception
@@ -361,7 +361,7 @@ python stream_server_enet_lidar+realsense.py
 
 **Author:** Sarath Kumar Komathukattil  
 **Degree:** MSc Mechatronic Systems  
-**University:** Kingston University, London (2025)
+**University:** Kingston University, London (2025–2026)
 
 ## 🔮 Future Work
 
