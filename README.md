@@ -1,4 +1,4 @@
-# 🚗 Autonomous Vehicle Perception System on Quanser QCar
+# 🧠 Deep Learning Perception System — Real-Time Computer Vision on Edge Hardware
 
 > **MSc Mechatronic Systems Dissertation** - End-to-end deep learning perception
 > pipeline with multi-sensor fusion, deployed on Quanser QCar hardware.
@@ -7,7 +7,6 @@
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Detection-green.svg)](https://github.com/ultralytics/ultralytics)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red.svg)](https://pytorch.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![ROS2](https://img.shields.io/badge/ROS2-Humble-blue.svg)](https://docs.ros.org/en/humble/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 🎯 Project Overview
@@ -335,13 +334,11 @@ python stream_server_enet_lidar+realsense.py
 ## 🛠️ Tech Stack
 
 **Languages:** Python 3.10  
-**Deep Learning:** TensorFlow, Keras, PyTorch (YOLOv8), Ultralytics  
-**Computer Vision:** OpenCV  
-**Robotics:** Quanser QCar API, QLabs Interactive Labs  
-**Hardware:** NVIDIA Jetson TX2, Quanser QCar 1:10 scale  
-**Sensors:** Intel RealSense D435, RPLidar A2, CSI Camera  
-**Networking:** TCP/IP socket communication  
-**Future:** Migrating to ROS2 Humble (in progress)
+**Deep Learning:** PyTorch, YOLOv8 (Ultralytics), TensorFlow/Keras
+**Computer Vision:** OpenCV, semantic segmentation (ENet, U-Net)  
+**ML Engineering:** Model optimization, edge deployment, multi-sensor fusion 
+**Hardware / Deployment:** NVIDIA Jetson TX2, Intel RealSense D435, RPLidar A2
+**Platform:** Quanser QCar
 
 ## 📊 Development Journey
 
@@ -364,20 +361,13 @@ python stream_server_enet_lidar+realsense.py
 **University:** Kingston University, London (2025–2026)
 
 ## 🔮 Future Work
-
-- [x] Simulation in QLabs
-- [x] Real hardware deployment (QCar)
-- [x] Multi-sensor fusion
-- [x] ROS2 Basics certification
-- [ ] Migration to ROS2 (in progress)
-- [ ] ROS2 Perception integration
-- [ ] Nav2 navigation stack
-- [ ] TensorRT optimization
+- [ ] TensorRT inference optimization
+- [ ] Quantization for faster edge inference
+- [ ] Expand detection classes / retrain on larger dataset
 
 ## 📫 Contact
 
 - 🇨🇦 Location: Canada 
-- 🎯 **Seeking:** Perception Engineer, Computer Vision Engineer, Robotics Software Engineer roles
 
 ## 📜 License
 
